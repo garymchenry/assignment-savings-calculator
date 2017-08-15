@@ -8,6 +8,49 @@
   </style>
   <script type="text/javascript" src="main.js" ></script>
 </head>
-<body>
+<body onload="onLoad()">
+  <div id="myDiv">
+    </div>
+    <h3>Savings Calculator</h3>
+    <form>
+    <p>
+      Starting Amount: <input type="text" id="amount" />
+      Rate of Return (percent): <input type="number" id="rate" />
+      Years: <input type="number" id="years" />
+      <input type="button" value="Calculate" onclick="calculate();"> </input>
+      <input type="button" value="Reset" onclick="reset();"> </input>
+      </p>
+    </form>
+    <p id=results_table>
+              <table>
+            <tr>
+                <th>
+                    Month
+                </th>
+                <th>
+                    Interest
+                </th>
+                <th>
+                    Balance
+                </th>                
+                                  
+            </tr>
+            <tbody>
+                <tr>
+                    <td>
+                      1
+                        </td>
+                    <td>
+                      6
+                        </td>
+                                        <td>
+                      10
+                        </td>
+
+                   </tr>
+                </tbody>
+        </table>
+
+      </p>
 </body>
 </html>
