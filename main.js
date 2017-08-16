@@ -11,9 +11,9 @@ years=parseFloat(document.getElementById("years").value);
 
 var resultsTable=document.getElementById("results_table");
 
-var innerHTML = "";
-innerHTML += "<table>";
-innerHTML += "<tr><th>Month</th><th>Interest</th><th>Balance</th></tr>";
+var myHTML = "";
+myHTML += "<table>";
+myHTML += "<tr><th>Month</th><th>Interest</th><th>Balance</th></tr>";
 
 for (var i=1; i<=years*12; i++){
     var month = i;
@@ -21,10 +21,10 @@ for (var i=1; i<=years*12; i++){
     var balance = Math.round((amount + interest) * 100) / 100;
     amount = balance;
     
-    innerHTML +="<tr><td>" + month + "</td><td>" + interest.toFixed(2) + "</td><td>" + balance + "</td></tr>";
+    myHTML +="<tr><td>" + month + "</td><td>" + interest.toFixed(2) + "</td><td>" + balance + "</td></tr>";
 }
 
-resultsTable.innerHTML = innerHTML;
+resultsTable.innerHTML = myHTML;
 }
 
 function reset(){
